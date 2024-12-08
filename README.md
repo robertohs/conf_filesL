@@ -1,2 +1,3 @@
-# prueba
-pruebaaa
+# config nvim
+
+arreglar config
