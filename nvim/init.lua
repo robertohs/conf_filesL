@@ -1,2 +1,2 @@
-print("ok kiwi --")
+print("---ok kiwi --")
 require("confi")
