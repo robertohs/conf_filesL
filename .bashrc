@@ -10,8 +10,6 @@ alias dev='cd ~/Desktop/xxxx/'
 alias ii='xdg-open .'
 
 
-
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -116,6 +114,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+
 
 export PS1="\[\e[1;36m\] rob\w \[\e[91m\]\$(parse_git_branch)\[\e[36m\]$ \e[31m\]"
 
