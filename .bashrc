@@ -2,11 +2,11 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="$PATH:/home/hecate/.zig"
+export PATH="$PATH:/home/xxxx/.zig"
 
 
 
-alias dev='cd ~/Desktop/windows_desk/'
+alias dev='cd ~/Desktop/xxxx/'
 alias ii='xdg-open .'
 
 
