@@ -1,3 +1,7 @@
 # config nvim
 
-arreglar config
+---
+
+---
+
+D!SSS
