@@ -5,8 +5,8 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/home/hecate/.zig"
 export PATH="$PATH:/usr/local/cuda-12.8/bin/"
-export PATH="$PATH:/home/hecate/llama.cpp/build/bin/llama-cli"
-export PATH="$PATH:/home/hecate/miniconda3/condabin"
+export PATH="$PATH:/home/$USER/llama.cpp/build/bin/llama-cli"
+export PATH="$PATH:/home/$USER/miniconda3/condabin"
 
 alias dev='cd ~/Desktop/windows_desk/'
 alias ii='xdg-open .'
