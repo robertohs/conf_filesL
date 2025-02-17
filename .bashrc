@@ -2,13 +2,14 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="$PATH:/home/xxxx/.zig"
+export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/home/hecate/.zig"
+export PATH="$PATH:/usr/local/cuda-12.8/bin/"
+export PATH="$PATH:/home/hecate/llama.cpp/build/bin/llama-cli"
+export PATH="$PATH:/home/hecate/miniconda3/condabin"
 
-
-
-alias dev='cd ~/Desktop/xxxx/'
+alias dev='cd ~/Desktop/windows_desk/'
 alias ii='xdg-open .'
-
 
 # If not running interactively, don't do anything
 case $- in
@@ -109,12 +110,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-
-
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-
 
 export PS1="\[\e[1;36m\] rob\w \[\e[91m\]\$(parse_git_branch)\[\e[36m\]$ \e[31m\]"
 
@@ -132,3 +130,19 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/hecate/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/hecate/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/hecate/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/hecate/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
