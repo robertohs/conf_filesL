@@ -8,8 +8,11 @@ export PATH="$PATH:/usr/local/cuda-12.8/bin/"
 export PATH="$PATH:/home/$USER/llama.cpp/build/bin/llama-cli"
 export PATH="$PATH:/home/$USER/miniconda3/condabin"
 
-alias dev='cd ~/Desktop/windows_desk/'
+alias newday='python3 ./cli.py &'
+alias place='cd ~/Desktop/place/'
 alias ii='xdg-open .'
+alias ymp3='yt-dlp --extract-audio --audio-quality 0 --audio-format mp3 '
+alias ss='spectacle'
 
 # If not running interactively, don't do anything
 case $- in
