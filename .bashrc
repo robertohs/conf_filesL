@@ -3,7 +3,7 @@
 # for examples
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="$PATH:/home/hecate/.zig"
+export PATH="$PATH:/home/$USER/.zig"
 export PATH="$PATH:/usr/local/cuda-12.8/bin/"
 export PATH="$PATH:/home/$USER/llama.cpp/build/bin/llama-cli"
 export PATH="$PATH:/home/$USER/miniconda3/condabin"
