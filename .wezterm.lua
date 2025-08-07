@@ -20,16 +20,22 @@ config.cell_width = 1.0
 config.line_height = 1.0
 config.window_background_opacity = 1.0
 config.text_background_opacity = 1.00
+--
 config.keys = {
+
 	-- paste from the clipboard
 	{ key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
 
+	{ key = "C", mods = "CTRL", action = wezterm.action({ CopyTo = "Clipboard" }) },
+	--{ key = "v", mods = "CTRL", action = wezterm.action({ PasteFrom = "Clipboard" }) },
 	-- paste from the primary selection
 	{ key = "v", mods = "CTRL", action = act.PasteFrom("PrimarySelection") },
 	{ key = "t", mods = "CTRL", action = act.SpawnTab("DefaultDomain") },
-	--{ key = 't', mods = 'SHIFT|ALT', action = act.SpawnTab 'DefaultDomain' },
+	{ key = "t", mods = "SHIFT|ALT", action = act.SpawnTab("DefaultDomain") },
+	--
 }
 
+--
 for i = 1, 6 do
 	table.insert(config.keys, {
 		key = "F" .. tostring(i),

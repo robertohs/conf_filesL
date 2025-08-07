@@ -1,18 +1,29 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="$PATH:/opt/nvim-linux64/bin"
+#sudo nano /etc/modprobe.d/nvidia-power-management.conf
+# options nvidia NVreg_PreserveVideoMemoryAllocations=1
+# options nvidia NVreg_TemporaryFilePath=/var/tmp 
+#
+# install wl-clipboard
+# install ripgrep
+#
+export PATH="$PATH:/opt/nvim-linux/bin"
 export PATH="$PATH:/home/$USER/.zig"
 export PATH="$PATH:/usr/local/cuda-12.8/bin/"
 export PATH="$PATH:/home/$USER/llama.cpp/build/bin/llama-cli"
 export PATH="$PATH:/home/$USER/miniconda3/condabin"
-
-alias newday='python3 ./cli.py &'
+#uv .. remove
+export PATH="$PATH:$HOME/.local/bin/env (sh, bash, zsh)"
+export PATH="$PATH:$HOME/.local/bin/env.fish (fish)"
+alias newday='python3.12 ./cli.py &'
 alias place='cd ~/Desktop/place/'
 alias ii='xdg-open .'
-alias ymp3='yt-dlp --extract-audio --audio-quality 0 --audio-format mp3 '
 alias ss='spectacle'
+alias env='source venv/bin/activate'
+
+## without cockies
+#alias dmp3='yt-dlp --extract-audio --audio-quality 0 --audio-format mp3 '
+#alias dmp4='yt-dlp -f "bv[height<=720]+ba/b[height<=720]" --merge-output-format mp4'
+alias dmp3='yt-dlp --cookies cookies.txt --extract-audio --audio-quality 0 --audio-format mp3 '
+alias dmp4='yt-dlp --cookies cookies.txt -f "bv[height<=720]+ba/b[height<=720]" --merge-output-format mp4'
 
 # If not running interactively, don't do anything
 case $- in
@@ -133,19 +144,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/hecate/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/hecate/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/hecate/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/hecate/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+. "$HOME/.local/bin/env"

@@ -5,6 +5,8 @@ require("conform").setup({
 		lua = { "stylua" },
 		-- Conform will run multiple formatters sequentially
 		python = { "black" },
+		zig = {"zls"},
+		c = { "clang-format" },
 		-- You can customize some of the format options for the filetype (:help conform.format)
 		-- rust = { "rustfmt", lsp_format = "fallback" },
 		-- Conform will run the first available formatter

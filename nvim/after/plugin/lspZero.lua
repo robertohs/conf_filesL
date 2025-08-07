@@ -22,22 +22,24 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
 		vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
 		vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
-		vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-		vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
-		vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+		vim.keymap.set("n", "rn", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+		vim.keymap.set({ "n", "x" }, "<F7>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
+		vim.keymap.set("n", "<F8>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 	end,
 })
 
 require("mason").setup({})
 
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "zls", "pyright", "emmet_ls", "ts_ls" },
+	ensure_installed = { "lua_ls", "zls", "pyright", "emmet_ls",},
 })
+
+
 
 require("lspconfig").lua_ls.setup({})
 require("lspconfig").zls.setup({})
 require("lspconfig").pyright.setup({})
-require("lspconfig").ts_ls.setup({})
+require("lspconfig").gopls.setup({})
 
 require("lspconfig").emmet_language_server.setup({
 	filetypes = {
