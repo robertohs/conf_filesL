@@ -14,7 +14,6 @@ export PATH="$PATH:/home/$USER/miniconda3/condabin"
 export PATH="$PATH:$HOME/.local/bin/env (sh, bash, zsh)"
 export PATH="$PATH:$HOME/.local/bin/env.fish (fish)"
 alias newday='python3.12 ./cli.py &'
-alias place='cd ~/Desktop/place/'
 alias ii='xdg-open .'
 alias ss='spectacle'
 alias env='source venv/bin/activate'
