@@ -1,4 +1,4 @@
-# config files
+# system config files
 
 ---
 
