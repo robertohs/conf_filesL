@@ -3,7 +3,7 @@ from random import randint
  from time import sleep
 
 
-dir_videos = "/home/hecate/mp3/"
+dir_videos = ".mp3/"
 video_list = os.listdir(dir_videos)
 TIME = 2700
 
