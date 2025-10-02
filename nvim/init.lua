@@ -1,20 +1,23 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.o.expandtab = true
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = '-> previous dir' })
 vim.keymap.set('n', '<leader>w', vim.cmd.write, { desc = '💾 write file' })
 vim.keymap.set('n', '<leader>e', vim.cmd.wq, { desc = '💾 write and quit' })
 vim.keymap.set('n', '<leader>r', vim.cmd.q, { desc = 'd quit' })
 vim.keymap.set('n', '<leader>1', vim.lsp.buf.format)
 -- Set to true if you have a Nerd Font installed and selected in the terminal
+--
 vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
-
 -- Make line numbers default
+
 vim.o.number = true
 vim.o.relativenumber = true
 -- You can also add relative line numbers, to help with jumping.
@@ -757,6 +760,8 @@ require('lazy').setup({
         -- See :h blink-cmp-config-keymap for defining your own keymap
         preset = 'default',
 
+        ['<Tab>'] = { 'select_and_accept', 'fallback' },
+
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
       },
@@ -811,7 +816,12 @@ require('lazy').setup({
   },
 
   -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  {
+    'folke/todo-comments.nvim',
+    event = 'VimEnter',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    opts = { signs = false },
+  },
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
@@ -856,7 +866,21 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'go', 'python' },
+      ensure_installed = {
+        'bash',
+        'c',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+        'go',
+        'python',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
