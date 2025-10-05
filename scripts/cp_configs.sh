@@ -79,7 +79,14 @@ echo -e "       +-----------------+"
 
 cd $DIR/conf_n
 git diff
-read -n 1 -s -r -p "Press any key to continue..."
-git add .
-git commit -m "auto save"
-git push
+
+read -p "Are you sure? [Yy]yes /[n]no " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    git add .
+    git commit -m "auto save"
+    git push
+fi
+echo -e "no changes!!"
+
