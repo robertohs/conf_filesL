@@ -79,7 +79,7 @@ echo -e "      \n       diff \n\n"
 
 cd $DIR/conf_n
 git diff
-read -p "Are you sure? [Yy]yes /[n]no " -n 1 -r
+read -p "git push?  [Yy]yes /[n]no " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
