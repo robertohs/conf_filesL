@@ -78,6 +78,8 @@ echo -e "       | sync ... github |"
 echo -e "       +-----------------+"
 
 cd $DIR/conf_n
+git diff
+read -n 1 -s -r -p "Press any key to continue..."
 git add .
 git commit -m "auto save"
 git push
