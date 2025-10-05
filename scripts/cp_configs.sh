@@ -1,14 +1,11 @@
 #!/bin/bash
 
-var1='A'
+DIR="/run/media/hecate/info-ssd"
 var2='B'
-
 echo -e " \n" 
 echo -e "       +--------------+"
 echo -e "       | saving files |"
 echo -e "       +--------------+"
-
-  
 
 doThing(){
 rm -rf  "$DEST_DIR/"
@@ -17,22 +14,6 @@ cp -r "$SOURCE_DIR" "$DEST_DIR"
 echo -e "       $NAME  ...  🟢 ok "
 }
 
-
-#SOURCE_DIR="/home/user/documents"
-#DEST_DIR="/home/user/backups"
-
-# Create destination directory if it doesn't exist
-#mkdir -p "$DEST_DIR"
-
-# Copy all .txt files from SOURCE_DIR to DEST_DIR
-#cp "$SOURCE_DIR"/*.txt "$DEST_DIR"/
-
-# Copy a specific file with a new name
-#cp "$SOURCE_DIR"/report.pdf "$DEST_DIR"/weekly_report.pdf
-
-# Copy an entire directory recursively and verbosely
-#cp -rv "$SOURCE_DIR"/images/ "$DEST_DIR"/archive_images/
-DIR="/run/media/hecate/info-ssd"
 
 if [ ! -d "$DIR/conf_n" ]; then
   mkdir "$DIR/conf_n"
