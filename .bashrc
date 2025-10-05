@@ -13,7 +13,7 @@ export PATH="$PATH:/home/$USER/miniconda3/condabin"
 #uv .. remove
 export PATH="$PATH:$HOME/.local/bin/env (sh, bash, zsh)"
 export PATH="$PATH:$HOME/.local/bin/env.fish (fish)"
-alias newday='python ./cli.py &'
+alias nd='python ./cli.py &'
 alias ii='xdg-open .'
 alias ss='spectacle'
 alias env='source venv/bin/activate'
