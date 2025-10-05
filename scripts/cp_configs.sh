@@ -71,15 +71,14 @@ DEST_DIR="$DIR/aple"
 doThing
 
 echo -e " \n" 
-
 echo -e " \n" 
 echo -e "       +-----------------+"
 echo -e "       | sync ... github |"
 echo -e "       +-----------------+"
+echo -e "      \n       diff \n\n" 
 
 cd $DIR/conf_n
 git diff
-
 read -p "Are you sure? [Yy]yes /[n]no " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
@@ -87,6 +86,8 @@ then
     git add .
     git commit -m "auto save"
     git push
+else
+    echo -e "no changes!!"
 fi
-echo -e "no changes!!"
+
 
