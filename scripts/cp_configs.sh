@@ -1,0 +1,56 @@
+#!/bin/bash
+
+var1='A'
+var2='B'
+
+echo -e " \n" 
+echo -e "       +--------------+"
+echo -e "       | saving files |"
+echo -e "       +--------------+"
+
+doThing(){
+rm -rf  "$DEST_DIR"
+cp -r "$SOURCE_DIR" "$DEST_DIR"/
+
+echo -e "       $NAME  ...  🟢 ok "
+}
+
+
+#SOURCE_DIR="/home/user/documents"
+#DEST_DIR="/home/user/backups"
+
+# Create destination directory if it doesn't exist
+#mkdir -p "$DEST_DIR"
+
+# Copy all .txt files from SOURCE_DIR to DEST_DIR
+#cp "$SOURCE_DIR"/*.txt "$DEST_DIR"/
+
+# Copy a specific file with a new name
+#cp "$SOURCE_DIR"/report.pdf "$DEST_DIR"/weekly_report.pdf
+
+# Copy an entire directory recursively and verbosely
+#cp -rv "$SOURCE_DIR"/images/ "$DEST_DIR"/archive_images/
+
+NAME="scripts"
+SOURCE_DIR="$HOME/scripts/"
+DEST_DIR="/run/media/hecate/info-ssd/conf_n/scripts"
+doThing
+
+NAME="nvim"
+SOURCE_DIR="$HOME/.config/nvim/"
+DEST_DIR="/run/media/hecate/info-ssd/conf_n/nvim/"
+doThing
+
+NAME="hyprland conf .conf/hypr "
+SOURCE_DIR="$HOME/.config/hypr/"
+DEST_DIR="/run/media/hecate/info-ssd/conf_n/hypr/"
+doThing
+
+NAME="matte black hypr"
+SOURCE_DIR="$HOME/.local/share/omarchy/themes/matte-black/"
+DEST_DIR="/run/media/hecate/info-ssd/conf_n/matte-black"
+doThing
+
+
+
+echo -e " \n" 
