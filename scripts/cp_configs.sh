@@ -57,6 +57,8 @@ echo -e "       | sync ... github |"
 echo -e "       +-----------------+"
 echo -e "      \n       diff \n\n" 
 
+read -n 1 -s -r -p "Press any key to continue..."
+
 cd $DIR/conf_n
 git diff
 read -p "git push?  [Yy]yes /[n]no " -n 1 -r
