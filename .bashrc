@@ -13,12 +13,13 @@ export PATH="$PATH:/home/$USER/miniconda3/condabin"
 #uv .. remove
 export PATH="$PATH:$HOME/.local/bin/env (sh, bash, zsh)"
 export PATH="$PATH:$HOME/.local/bin/env.fish (fish)"
-alias newday='python3.12 ./cli.py &'
+alias newday='python ./cli.py &'
 alias ii='xdg-open .'
 alias ss='spectacle'
 alias env='source venv/bin/activate'
+alias m = '/usr/bin/nvim'
 
-## without cockies
+## without cookies
 #alias dmp3='yt-dlp --extract-audio --audio-quality 0 --audio-format mp3 '
 #alias dmp4='yt-dlp -f "bv[height<=720]+ba/b[height<=720]" --merge-output-format mp4'
 alias dmp3='yt-dlp --cookies cookies.txt --extract-audio --audio-quality 0 --audio-format mp3 '
@@ -143,4 +144,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-. "$HOME/.local/bin/env"
