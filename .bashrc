@@ -17,7 +17,7 @@ alias newday='python ./cli.py &'
 alias ii='xdg-open .'
 alias ss='spectacle'
 alias env='source venv/bin/activate'
-alias m = '/usr/bin/nvim'
+alias n='/usr/bin/nvim'
 
 ## without cookies
 #alias dmp3='yt-dlp --extract-audio --audio-quality 0 --audio-format mp3 '
