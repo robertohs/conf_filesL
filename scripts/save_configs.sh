@@ -50,6 +50,12 @@ SOURCE_DIR="$HOME/aple"
 DEST_DIR="$DIR/aple"
 doThing
 
+NAME="waybar"
+SOURCE_DIR="$HOME/.config/waybar"
+DEST_DIR="$DIR/conf_n/waybar"
+doThing
+
+
 echo -e " \n" 
 echo -e " \n" 
 echo -e "       +-----------------+"
