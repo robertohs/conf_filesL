@@ -8,6 +8,11 @@ vim.keymap.set("n", "<leader>w", vim.cmd.write, { desc = "💾 write file" })
 vim.keymap.set("n", "<leader>e", vim.cmd.wq, { desc = "💾 write and quit" })
 vim.keymap.set("n", "<leader>r", vim.cmd.q, { desc = "d quit" })
 vim.keymap.set("n", "<leader>1", vim.lsp.buf.format)
+--vim.keymap.set("n", "<C-k>", vim.lsp.buf.rename,{ desc = "rename"})
+--vim.keymap.set("n", "<C-k>", function()
+--	print("pressed")
+--end, { desc = "rename" })
+--
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 --
 vim.g.have_nerd_font = true
