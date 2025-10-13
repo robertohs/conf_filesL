@@ -48,7 +48,24 @@ vim.keymap.set("n", "<leader>2", function()
 end, { desc = "run outside nvim" })
 
 --
+--
+-- run test
+vim.keymap.set("n", "<leader>3", function()
+	if vim.fn.expand("%:e") == "lua" then
+		print("add lua compiler/run")
+	end
+	if vim.fn.expand("%:e") == "go" then
+		vim.fn.jobstart({
+			"alacritty",
+			"-e",
+			"bash",
+			"-c",
+			"go test ; echo 'press enter to close'; read",
+		})
+	end
+end, { desc = "run tests" })
 
+--
 -------------- end running files
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 --
