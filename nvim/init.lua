@@ -6,14 +6,52 @@ vim.o.expandtab = true
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "-> previous dir" })
 vim.keymap.set("n", "<leader>w", vim.cmd.write, { desc = "💾 write file" })
 vim.keymap.set("n", "<leader>e", vim.cmd.wq, { desc = "💾 write and quit" })
-vim.keymap.set("n", "<leader>r", vim.cmd.q, { desc = "d quit" })
-vim.keymap.set("n", "<leader>1", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>r", function()
+	vim.cmd("q!")
+end, { desc = "d quit" })
+vim.keymap.set("n", "<leader>5", vim.lsp.buf.format)
 --vim.keymap.set("n", "<C-k>", vim.lsp.buf.rename,{ desc = "rename"})
 --vim.keymap.set("n", "<C-k>", function()
 --	print("pressed")
 --end, { desc = "rename" })
 --
+--running files , relative at where u are at!
+
+-- run inside vim
+vim.keymap.set("n", "<leader>1", function()
+	if vim.fn.expand("%:e") == "lua" then
+		print("add lua compiler/run")
+	end
+	if vim.fn.expand("%:e") == "go" then
+		local path = vim.fn.expand("%:p")
+
+		vim.cmd("!go run " .. path)
+		print(path)
+	end
+end, { desc = "run inside nvim" })
+
+-- run outside
+--
+vim.keymap.set("n", "<leader>2", function()
+	if vim.fn.expand("%:e") == "lua" then
+		print("add lua compiler/run")
+	end
+	if vim.fn.expand("%:e") == "go" then
+		vim.fn.jobstart({
+			"alacritty",
+			"-e",
+			"bash",
+			"-c",
+			"go run " .. vim.fn.expand("%:p") .. " echo; echo 'Press ENTER to close'; read",
+		})
+	end
+end, { desc = "run outside nvim" })
+
+--
+
+-------------- end running files
 -- Set to true if you have a Nerd Font installed and selected in the terminal
+--
 --
 vim.g.have_nerd_font = true
 
