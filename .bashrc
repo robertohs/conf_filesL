@@ -19,7 +19,7 @@ alias ss='spectacle'
 alias env='source venv/bin/activate'
 alias n='/usr/bin/nvim'
 
-## without cookies
+## cookies
 #alias dmp3='yt-dlp --extract-audio --audio-quality 0 --audio-format mp3 '
 #alias dmp4='yt-dlp -f "bv[height<=720]+ba/b[height<=720]" --merge-output-format mp4'
 alias dmp3='yt-dlp --cookies cookies.txt --extract-audio --audio-quality 0 --audio-format mp3 '
