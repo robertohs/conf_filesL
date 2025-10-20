@@ -1,7 +1,7 @@
 # system config files
 
 ---
-Mis archivos de configuracion en linux,
+Archivos de configuracion en linux,
 ---
 
 
