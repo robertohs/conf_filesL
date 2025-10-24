@@ -1,3 +1,6 @@
+# If not running interactively, don't do anything (leave this at the top of this file)
+[[ $- != *i* ]] && return
+
 #sudo nano /etc/modprobe.d/nvidia-power-management.conf
 # options nvidia NVreg_PreserveVideoMemoryAllocations=1
 # options nvidia NVreg_TemporaryFilePath=/var/tmp 

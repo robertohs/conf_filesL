@@ -26,7 +26,7 @@ vim.keymap.set("n", "<leader>1", function()
 		local path = vim.fn.expand("%:p")
 
 		vim.cmd("!go run " .. path)
-		print(path)
+		--	print(path)
 	end
 end, { desc = "run inside nvim" })
 
@@ -42,7 +42,8 @@ vim.keymap.set("n", "<leader>2", function()
 			"-e",
 			"bash",
 			"-c",
-			"go run " .. vim.fn.expand("%:p") .. " echo; echo 'Press ENTER to close'; read",
+			--"go run " .. vim.fn.expand("%:p") .. " echo; echo 'Press ENTER to close'; read",
+			"go run ." .. " echo; echo 'Press ENTER to close'; read",
 		})
 	end
 end, { desc = "run outside nvim" })
