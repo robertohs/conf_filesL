@@ -2,6 +2,7 @@
 
 var1='A'
 DIR="/run/media/hecate/info-ssd"
+DIR="/home/hecate"
 
 echo -e " \n" 
 echo -e "       +--------------+"
