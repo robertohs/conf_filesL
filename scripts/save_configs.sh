@@ -46,10 +46,10 @@ SOURCE_DIR="$HOME/.local/share/omarchy/themes/matte-black"
 DEST_DIR="$DIR/conf_filesL/matte-black"
 doThing
 
-NAME="aple"
-SOURCE_DIR="$HOME/aple"
-DEST_DIR="$DIR/aple"
-doThing
+#NAME="aple"
+#SOURCE_DIR="$HOME/aple"
+#DEST_DIR="$DIR/aple"
+#doThing
 
 NAME="waybar"
 SOURCE_DIR="$HOME/.config/waybar"
